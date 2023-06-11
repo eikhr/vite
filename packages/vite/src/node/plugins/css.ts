@@ -977,7 +977,7 @@ async function compileCSS(
   }
 
   if (isModule) {
-    postcssPlugins.unshift(
+    postcssPlugins.push(
       (await importPostcssModules()).default({
         ...modulesOptions,
         localsConvention: modulesOptions?.localsConvention,
